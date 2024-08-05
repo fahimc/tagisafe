@@ -38,7 +38,6 @@ window.main = () => {
   document.getElementById("whatsappButton").onclick = function () {
     window.location.href = `https://wa.me/${phoneNumber}`;
   };
-  new Glide(".glide").mount();
 };
 window.create = () => {
   const codes = window.codes;
