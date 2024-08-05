@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <title>TagiSafe</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <img src="/logo.png" class="logo" alt="TagiSafe Logo" />
+        <p class="slogan">Lost and Found, Just a Tap Away</p>
+        <h1>Create Link</h1>
+        <label>Select a Avatar</label>
+        <div class="glide">
+          <img src="left-arrow.png" id="left-arrow" />
+          <img src="right-arrow.png" id="right-arrow" />
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide" data-value="3">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-3.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+              <li class="glide__slide" data-value="4">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-4.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+              <li class="glide__slide" data-value="2">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-2.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+              <li class="glide__slide" data-value="5">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-5.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+              <li class="glide__slide" data-value="1">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-1.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+              <li class="glide__slide" data-value="6">
+                <img
+                  id="avatar"
+                  src="avatar/avatar-6.svg"
+                  alt=""
+                  class="avatar"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section>
+          <input id="name" placeholder="Type My Name" />
+        </section>
+        <section>
+          <label>My Parents Number (without the initial 0)</label>
+          <div class="group">
+            <select id="country-codes"></select>
+            <input id="phone-number" placeholder="phone number" />
+          </div>
+        </section>
+        <section>
+          <label>My Home Address</label>
+          <div class="group">
+            <input id="first-line" placeholder="first line of address" />
+            <input id="post-code" placeholder="post code" />
+          </div>
+        </section>
+        <section>
+          <div id="link-container" class="hide"></div>
+          <button id="generate-button" class="button-style">Create Link</button>
+        </section>
+      </div>
+      <div class="footer">© Copyright 2024 - TagiSafe</div>
+    </div>
+    <script type="module" src="/create.js"></script>
+  </body>
+</html>

@@ -39,3 +39,4 @@ document.getElementById("callButton").onclick = function () {
 document.getElementById("whatsappButton").onclick = function () {
   window.location.href = `https://wa.me/${phoneNumber}`;
 };
+new Glide(".glide").mount();

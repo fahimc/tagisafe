@@ -1,0 +1,213 @@
+:root {
+  --teal: #00ffd5;
+  --purple: #5100ff;
+}
+body {
+  background-color: var(--purple);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+}
+#app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.slogan {
+  color: var(--teal);
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.name {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.logo {
+  max-width: 80vw;
+}
+.avatar {
+  width: 100%;
+  max-width: 300px;
+}
+p {
+  text-align: center;
+}
+.footer {
+  bottom: 0;
+  padding: 50px;
+}
+.glide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input,
+select {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #6f2efb;
+  color: white;
+  font-size: 1.4rem;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  width: 350px;
+  max-width: 80%;
+  margin-top: 10px;
+}
+.group {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+::placeholder {
+  color: rgb(240, 240, 240);
+  opacity: 1; /* Firefox */
+}
+section {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* CSS */
+.button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 20px 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+.icon {
+  width: 30px;
+}
+
+.button-style:disabled {
+  cursor: default;
+}
+
+.button-style:focus {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+}
+#link-container {
+  background-color: #6f2efb;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 20px;
+  padding-bottom: 60px;
+  position: relative;
+  max-width: 80%;
+  word-break: break-all;
+}
+#link-container::after {
+  content: "Copy to clipboard";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  padding: 10px;
+  background-color: var(--purple);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+#link-container:active:after {
+  content: "Copied!";
+  position: absolute;
+  bottom: 0px;
+  top: 0;
+  right: 0px;
+  left: 0px;
+  padding: 10px;
+  background-color: var(--purple);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.hide {
+  display: none;
+}
+.glide {
+  position: relative;
+}
+#left-arrow {
+  position: absolute;
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+#right-arrow {
+  position: absolute;
+  height: 100px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+@media (max-width: 600px) {
+  .slogan {
+    font-size: 1.5rem;
+  }
+  #left-arrow {
+    transform: translate(-100%, -50%);
+    height: 50px;
+  }
+  #right-arrow {
+    height: 50px;
+    transform: translate(100%, -50%);
+  }
+  input,
+  select {
+    font-size: 1rem;
+  }
+}
