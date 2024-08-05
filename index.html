@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&display=swap"
+      rel="stylesheet"
+    />
     <title>TagiSafe</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <img src="/logo.png" class="logo" alt="TagiSafe Logo" />
+        <p class="slogan">Lost and Found, Just a Tap Away</p>
+        <img id="avatar" src="avatar/avatar-0.svg" alt="" class="avatar" />
+        <p id="personName"></p>
+        <button class="button-style" id="callButton">Call My Parents</button>
+        <button class="button-style" id="whatsappButton">Send WhatsApp</button>
+        <button class="button-style" id="mapsButton">My Address</button>
+      </div>
+      <div class="footer">© Copyright 2024 - TagiSafe</div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
