@@ -1,4 +1,4 @@
-window.main = () => {
+if (!window.location.pathname.includes("create")) {
   const params = new URLSearchParams(window.location.search);
 
   // Extract information from the query parameters
@@ -6,7 +6,7 @@ window.main = () => {
   const phoneNumber = params.get("phone");
   const address = params.get("address");
   const avatar = params.get("avatar");
-
+  console.l;
   if (!address) {
     document.getElementById("mapsButton").style.display = "none";
   } else {
@@ -38,8 +38,7 @@ window.main = () => {
   document.getElementById("whatsappButton").onclick = function () {
     window.location.href = `https://wa.me/${phoneNumber}`;
   };
-};
-window.create = () => {
+} else {
   const codes = window.codes;
   const glide = new Glide(".glide").mount();
   let avatarIndex = 0;
@@ -82,4 +81,4 @@ window.create = () => {
     option.text = `${code["dial_code"]} (${code.name})`;
     countryCodeElement.appendChild(option);
   });
-};
+}
